@@ -6,11 +6,11 @@ A machine learning project focused on predicting the survival of passengers aboa
 ---
 
 ## 📑 Table of Contents
-- [Objectives](#objectives)
-- [Summary](#summary)
-- [Data Source](#data-source)
-- [Methodology](#methodology)
-- [Results](#results)
+- [Objectives](#-objectives)
+- [Summary](#-summary)
+- [Data Source](#-data-source)
+- [Methodology](#-methodology)
+- [Results](#-results)
 
 ---
 
