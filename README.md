@@ -3,6 +3,14 @@
 **Description:**  
 A machine learning project focused on predicting the survival of passengers aboard the Titanic based on their characteristics, such as age, gender, class, and more. The analysis utilizes two predictive models: **Logistic Regression** and **K-Nearest Neighbors (KNN)**, providing insights into the factors influencing survival.
 
+## 📑 Table of Contents
+
+2. [Objectives](#objectives)
+3. [Summary](#summary)
+4. [Data Source](#data-source)
+5. [Methodology](#methodology)
+6. [Results](#results)
+
 ---
 
 ## 🎯 Objectives
@@ -33,6 +41,12 @@ A machine learning project focused on predicting the survival of passengers aboa
 
 4. **Model Comparison**:
    - Logistic Regression outperformed KNN across all metrics, proving to be a more suitable model for this dataset.
+
+---
+
+## 🗂️ Data Source
+
+The dataset used in this project is the famous **Titanic dataset**, available on [Kaggle](https://www.kaggle.com/c/titanic).
 
 ---
 
@@ -98,53 +112,3 @@ The dataset used in this project comes from **Kaggle's Titanic dataset**. It con
 - **Accuracy**: 65.31%
 - **Sensitivity**: 53.29%
 - **Specificity**: 72.18%
-
----
-
-## 📊 Results
-
-### Logistic Regression
-- **Accuracy**: 81%
-- **Precision**: 78%
-- **Recall**: 72%
-- **F1-Score**: 75%
-
-### K-Nearest Neighbors (KNN)
-- **Accuracy**: 79%
-- **Precision**: 76%
-- **Recall**: 70%
-- **F1-Score**: 73%
-- **Optimal K**: 5
-
-### Key Insights
-- **Gender**: Females had a significantly higher survival rate than males.
-- **Passenger Class**: Passengers in first class were more likely to survive compared to those in second and third class.
-- **Family Size**: Moderate family sizes (e.g., 1-2 relatives aboard) were associated with higher survival rates.
-
----
-
-## 📈 Visualizations
-
-Include a few examples of visualizations that help to understand the dataset and results, such as:
-1. Survival rates by gender and class.
-2. Distribution of ages for survivors vs. non-survivors.
-3. Confusion matrices for both models.
-
-Example placeholder for a visualization:
-
-![Survival by Gender](path/to/survival_by_gender.png)
-
----
-
-## 🗂️ Data Source
-
-The dataset used in this project is the famous **Titanic dataset**, available on [Kaggle](https://www.kaggle.com/c/titanic).
-
----
-
-## 💻 Installation & Usage
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/your_username/titanic-survival-prediction.git
