@@ -14,6 +14,28 @@ A machine learning project focused on predicting the survival of passengers aboa
 
 ---
 
+## 📊 Summary
+
+### Conclusions:
+
+1. **Logistic Regression**:
+   - Achieved an **accuracy of 93%**, with strong sensitivity and specificity.
+   - The **ROC AUC** score was **0.98**, indicating excellent model performance.
+
+2. **K-Nearest Neighbors (KNN)**:
+   - Achieved an **accuracy of 65%** with moderate sensitivity and specificity.
+   - The **ROC AUC** score was lower than Logistic Regression, at **0.72**.
+
+3. **Key Factors Influencing Survival**:
+   - **Gender**: Females had a significantly higher survival rate than males.
+   - **Class**: Passengers in first class had a much higher likelihood of survival compared to second and third class.
+   - **Age**: Younger passengers and children showed better survival rates.
+
+4. **Model Comparison**:
+   - Logistic Regression outperformed KNN across all metrics, proving to be a more suitable model for this dataset.
+
+---
+
 ## 📝 Methodology
 
 ### Data Overview
@@ -49,6 +71,33 @@ The dataset used in this project comes from **Kaggle's Titanic dataset**. It con
 - **Train-Test Split**: Data was divided into 80% training and 20% testing sets.
 - **Metrics**: Evaluated models using accuracy, precision, recall, and F1-score.
 - **Hyperparameter Tuning**: Performed grid search to optimize the number of neighbors for KNN.
+
+---
+
+## 📈 Results
+
+### Logistic Regression
+#### Confusion Matrix
+| Predicted | 0    | 1    |
+|-----------|------|------|
+| **Actual 0** | 253  | 13   |
+| **Actual 1** | 16   | 136  |
+
+- **Accuracy**: 93.06%
+- **Sensitivity**: 89.47%
+- **Specificity**: 95.11%
+- **ROC AUC**: 0.98
+
+### K-Nearest Neighbors (KNN)
+#### Confusion Matrix
+| Predicted | 0    | 1    |
+|-----------|------|------|
+| **Actual 0** | 192  | 74   |
+| **Actual 1** | 71   | 81   |
+
+- **Accuracy**: 65.31%
+- **Sensitivity**: 53.29%
+- **Specificity**: 72.18%
 
 ---
 
