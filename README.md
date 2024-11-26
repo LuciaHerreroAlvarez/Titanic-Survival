@@ -5,11 +5,11 @@ A machine learning project focused on predicting the survival of passengers aboa
 
 ## 📑 Table of Contents
 
-2. [Objectives](#objectives)
-3. [Summary](#summary)
-4. [Data Source](#data-source)
-5. [Methodology](#methodology)
-6. [Results](#results)
+1. [Objectives](#objectives)
+2. [Summary](#summary)
+3. [Data Source](#data-source)
+4. [Methodology](#methodology)
+5. [Results](#results)
 
 ---
 
@@ -88,7 +88,7 @@ The dataset used in this project comes from **Kaggle's Titanic dataset**. It con
 
 ---
 
-## 📈 Results
+## 🏆 Results
 
 ### Logistic Regression
 #### Confusion Matrix
