@@ -1,24 +1,24 @@
 # Titanic Survival Prediction
 
-**Description:**  
-A machine learning project focused on predicting the survival of passengers aboard the Titanic based on their characteristics, such as age, gender, class, and more. The analysis utilizes two predictive models: **Logistic Regression** and **K-Nearest Neighbors (KNN)**, providing insights into the factors influencing survival.
+## Description:
+A machine learning project focused on predicting the survival of passengers aboard the Titanic based on their characteristics, such as age, gender, class, and more. The analysis utilizes two predictive models: Logistic Regression and K-Nearest Neighbors (KNN), providing insights into the factors influencing survival.
+
+---
 
 ## 📑 Table of Contents
-
-1. [Objectives](#objectives)
-2. [Summary](#summary)
-3. [Data Source](#data-source)
-4. [Methodology](#methodology)
-5. [Results](#results)
+- [Objectives](#objectives)
+- [Summary](#summary)
+- [Data Source](#data-source)
+- [Methodology](#methodology)
+- [Results](#results)
 
 ---
 
 ## 🎯 Objectives
-
-- **Understand survival factors**: Analyze key passenger attributes that influenced survival during the Titanic disaster.
-- **Build predictive models**: Create two models, Logistic Regression and KNN, to predict passenger survival.
-- **Compare model performance**: Evaluate the effectiveness of both models using metrics like accuracy and confusion matrices.
-- **Data visualization**: Generate clear visualizations to illustrate survival trends and model results.
+- **Understand survival factors:** Analyze key passenger attributes that influenced survival during the Titanic disaster.
+- **Build predictive models:** Create two models, Logistic Regression and KNN, to predict passenger survival.
+- **Compare model performance:** Evaluate the effectiveness of both models using metrics like accuracy, confusion matrices, and ROC AUC.
+- **Data visualization:** Generate clear visualizations to illustrate survival trends and model results.
 
 ---
 
@@ -26,34 +26,38 @@ A machine learning project focused on predicting the survival of passengers aboa
 
 ### Conclusions:
 
-1. **Logistic Regression**:
-   - Achieved an **accuracy of 93%**, with strong sensitivity and specificity.
-   - The **ROC AUC** score was **0.98**, indicating excellent model performance.
+#### Logistic Regression:
+- **Accuracy:** 93.06%
+- **Sensitivity:** 89.47%
+- **Specificity:** 95.11%
+- **ROC AUC:** 0.976, indicating excellent model performance.
 
-2. **K-Nearest Neighbors (KNN)**:
-   - Achieved an **accuracy of 65%** with moderate sensitivity and specificity.
-   - The **ROC AUC** score was lower than Logistic Regression, at **0.72**.
+#### K-Nearest Neighbors (KNN):
+- **Accuracy:** 65.31%
+- **Sensitivity:** 53.29%
+- **Specificity:** 72.18%
+- **ROC AUC:** (not calculated, please compute if needed).
 
-3. **Key Factors Influencing Survival**:
-   - **Gender**: Females had a significantly higher survival rate than males.
-   - **Class**: Passengers in first class had a much higher likelihood of survival compared to second and third class.
-   - **Age**: Younger passengers and children showed better survival rates.
+### Key Factors Influencing Survival:
+- **Gender:** Females had a significantly higher survival rate than males.
+- **Class:** Passengers in first class had a much higher likelihood of survival compared to second and third class.
+- **Age:** Younger passengers and children showed better survival rates.
 
-4. **Model Comparison**:
-   - Logistic Regression outperformed KNN across all metrics, proving to be a more suitable model for this dataset.
+### Model Comparison:
+- **Logistic Regression** outperformed KNN across all metrics, proving to be a more suitable model for this dataset.
 
 ---
 
 ## 🗂️ Data Source
-
-The dataset used in this project is the famous **Titanic dataset**, available on [Kaggle](https://www.kaggle.com/c/titanic).
+The dataset used in this project is the famous Titanic dataset, available on Kaggle.
 
 ---
 
 ## 📝 Methodology
 
 ### Data Overview
-The dataset used in this project comes from **Kaggle's Titanic dataset**. It contains information about passengers, including:
+The dataset used in this project comes from Kaggle's Titanic dataset. It contains information about passengers, including:
+
 - Passenger ID
 - Survival (1 = Survived, 0 = Did not survive)
 - Passenger class (Pclass)
@@ -67,48 +71,59 @@ The dataset used in this project comes from **Kaggle's Titanic dataset**. It con
 - Embarked (Port of embarkation)
 
 ### Data Cleaning & Preprocessing
-1. **Handling missing data**: 
-   - Filled missing ages using median values based on passenger class and gender.
-   - Imputed missing embarked values with the mode.
-2. **Feature encoding**: Converted categorical variables (e.g., gender, embarked) into numerical values.
-3. **Normalization**: Scaled continuous features (e.g., age, fare) to improve model performance.
-4. **Feature selection**: Selected relevant features like age, gender, class, SibSp, and Parch for modeling.
 
-### Models Implemented
-- **Logistic Regression**:
-  - A simple and interpretable algorithm for binary classification.
-  - Provides insights into the importance of individual features.
-- **K-Nearest Neighbors (KNN)**:
-  - A non-parametric model that classifies passengers based on the similarity to their nearest neighbors.
+- **Handling missing data:**
+  - Filled missing ages using the median value for the 'Age' column.
+  - Imputed missing embarked values with the mode.
 
-### Model Evaluation
-- **Train-Test Split**: Data was divided into 80% training and 20% testing sets.
-- **Metrics**: Evaluated models using accuracy, precision, recall, and F1-score.
-- **Hyperparameter Tuning**: Performed grid search to optimize the number of neighbors for KNN.
+- **Feature encoding:** Converted categorical variables (e.g., gender, embarked) into numerical values using one-hot encoding.
+
+- **Feature selection:** Selected relevant features like age, gender, class, SibSp, and Parch for modeling.
+
+### Feature Engineering:
+- **IsMinor:** Added a column indicating whether a passenger was a minor (age < 16) to explore its impact on survival.
+
+### Models Implemented:
+- **Logistic Regression:** A simple and interpretable algorithm for binary classification. Provides insights into the importance of individual features.
+- **K-Nearest Neighbors (KNN):** A non-parametric model that classifies passengers based on the similarity to their nearest neighbors.
+
+### Model Evaluation:
+- **Train-Test Split:** Data was divided into 80% training and 20% testing sets.
+- **Metrics:** Evaluated models using accuracy, precision, recall, and F1-score.
+- **Hyperparameter Tuning:** Performed grid search to optimize the number of neighbors for KNN.
 
 ---
 
 ## 🏆 Results
 
 ### Logistic Regression
-#### Confusion Matrix
+
+#### Confusion Matrix:
 | Predicted | 0    | 1    |
 |-----------|------|------|
-| **Actual 0** | 253  | 13   |
-| **Actual 1** | 16   | 136  |
+| Actual 0  | 253  | 13   |
+| Actual 1  | 16   | 136  |
 
-- **Accuracy**: 93.06%
-- **Sensitivity**: 89.47%
-- **Specificity**: 95.11%
-- **ROC AUC**: 0.98
+- **Accuracy:** 93.06%
+- **Sensitivity:** 89.47%
+- **Specificity:** 95.11%
+- **ROC AUC:** 0.976
 
 ### K-Nearest Neighbors (KNN)
-#### Confusion Matrix
+
+#### Confusion Matrix:
 | Predicted | 0    | 1    |
 |-----------|------|------|
-| **Actual 0** | 192  | 74   |
-| **Actual 1** | 71   | 81   |
+| Actual 0  | 192  | 74   |
+| Actual 1  | 71   | 81   |
 
-- **Accuracy**: 65.31%
-- **Sensitivity**: 53.29%
-- **Specificity**: 72.18%
+- **Accuracy:** 65.31%
+- **Sensitivity:** 53.29%
+- **Specificity:** 72.18%
+- **ROC AUC:** (Not calculated; consider calculating for completeness)
+
+---
+
+### Notes:
+- The model for Logistic Regression outperformed KNN across all evaluation metrics.
+- The **IsMinor** feature added valuable insights into the survival prediction model, potentially influencing how age impacted survival.
