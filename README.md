@@ -46,10 +46,13 @@ A machine learning project focused on predicting the survival of passengers aboa
 ### Model Comparison:
 - **Logistic Regression** outperformed KNN across all metrics, proving to be a more suitable model for this dataset.
 
+### Notes:
+- The **IsMinor** feature added valuable insights into the survival prediction model, potentially influencing how age impacted survival.
+
 ---
 
 ## 🗂️ Data Source
-The dataset used in this project is the famous Titanic dataset, available on Kaggle.
+The dataset used in this project is the famous Titanic dataset, available on Kaggle: https://www.kaggle.com/competitions/titanic
 
 ---
 
@@ -121,9 +124,3 @@ The dataset used in this project comes from Kaggle's Titanic dataset. It contain
 - **Sensitivity:** 53.29%
 - **Specificity:** 72.18%
 - **ROC AUC:** (Not calculated; consider calculating for completeness)
-
----
-
-### Notes:
-- The model for Logistic Regression outperformed KNN across all evaluation metrics.
-- The **IsMinor** feature added valuable insights into the survival prediction model, potentially influencing how age impacted survival.
